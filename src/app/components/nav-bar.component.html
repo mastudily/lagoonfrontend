@@ -1,21 +1,21 @@
 <div class="ui inverted fixed menu">
   <div class="ui secondary pointing menu ">
     <a class="item" routerLink="/home" routerLinkActive="active">
-      <img src="resources/static/pic/logo.png" />
+      <img src="resources/static/pic/logoNuevo.png" />
     </a>
     <a class="item" routerLink="/home" routerLinkActive="active">
-      <h2>Lagoon</h2>
+      <h2>Orobienes</h2>
     </a>
     <a class="item" routerLink="/home" routerLinkActive="active">
-      Home
+      Inicio
     </a>
     <a class="item" routerLink="/my-album" routerLinkActive="active">
-      My Album
+      Mis propiedades
     </a>
   </div>
   <div class="right menu ">
     <a *ngIf="!loginService.checkLogin()" class="item" routerLink="/register" routerLinkActive="active" >
-      Register
+      Registrarse
     </a>
     <a class="item" routerLink="/login" routerLinkActive="active" (click)="onClick()">
       {{loginService.checkLogin()? 'Logout' : 'Login'}}
