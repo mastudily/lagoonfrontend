@@ -16,13 +16,13 @@ export class UserService {
   }
 
   getUserByName(username: string) {
-    let tokenUrl = "https://lagoonbackend.herokuapp.com//rest/user/userName";
+    let tokenUrl = "https://lagoonbackend.herokuapp.com/rest/user/userName";
     let headers = new Headers({'Content-Type': 'application/json', 'Authorization': 'Bearer '+localStorage.getItem("token")});
     return this.http.post(tokenUrl, username, {headers: headers});
   }
 
   updateUser(user: User) {
-    let tokenUrl1 = "https://lagoonbackend.herokuapp.com//rest/user/update";
+    let tokenUrl1 = "https://lagoonbackend.herokuapp.com/rest/user/update";
     let headers1 = new Headers({'Content-Type': 'application/json', 'Authorization': 'Bearer '+localStorage.getItem("token")});
     return this.http.post(tokenUrl1, JSON.stringify(user), {headers: headers1});
   }

@@ -9,7 +9,7 @@ export class UploadPhotoService {
     }
 
     upload() {
-        this.makeFileRequest("https://lagoonbackend.herokuapp.com//rest/photo/upload", [], this.filesToUpload).then((result) => {
+        this.makeFileRequest("https://lagoonbackend.herokuapp.com/rest/photo/upload", [], this.filesToUpload).then((result) => {
             console.log(result);
         }, (error) => {
             console.error(error);

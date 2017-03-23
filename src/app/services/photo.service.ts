@@ -9,24 +9,24 @@ export class PhotoService {
   constructor (private http:Http){}
 
   getPhotos() {
-    let url = "https://lagoonbackend.herokuapp.com//photo/allPhotos";
+    let url = "https://lagoonbackend.herokuapp.com/photo/allPhotos";
     return this.http.get(url);
   }
 
   getPhotoById (photoId: number) {
-    let tokenUrl1 = "https://lagoonbackend.herokuapp.com//rest/photo/photoId";
+    let tokenUrl1 = "https://lagoonbackend.herokuapp.com/rest/photo/photoId";
     let headers1 = new Headers({'Content-Type': 'application/json', 'Authorization': 'Bearer '+localStorage.getItem("token")});
     return this.http.post(tokenUrl1, JSON.stringify(photoId), {headers: headers1});
   }
 
   getPhotosByUser (user: User) {
-    let tokenUrl1 = "https://lagoonbackend.herokuapp.com//rest/photo/user";
+    let tokenUrl1 = "https://lagoonbackend.herokuapp.com/rest/photo/user";
     let headers1 = new Headers({'Content-Type': 'application/json', 'Authorization': 'Bearer '+localStorage.getItem("token")});
     return this.http.post(tokenUrl1, JSON.stringify(user), {headers: headers1});
   }
 
   updatePhoto(photo: Photo) {
-    let tokenUrl1 = "https://lagoonbackend.herokuapp.com//rest/photo/update";
+    let tokenUrl1 = "https://lagoonbackend.herokuapp.com/rest/photo/update";
     let headers1 = new Headers({'Content-Type': 'application/json', 'Authorization': 'Bearer '+localStorage.getItem("token")});
     return this.http.post(tokenUrl1, JSON.stringify(photo), {headers: headers1});
   }

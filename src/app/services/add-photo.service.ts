@@ -9,7 +9,7 @@ export class AddPhotoService {
   constructor (private http: Http) {}
 
   sendPhoto(photo:Photo) {
-    let url = "https://lagoonbackend.herokuapp.com//rest/photo/add";
+    let url = "https://lagoonbackend.herokuapp.com/rest/photo/add";
     let headers1 = new Headers({'Content-Type': 'application/json', 'Authorization':'Bearer '+localStorage.getItem("token")});
     console.log(url);
     return this.http.post(url, JSON.stringify(photo), {headers: headers1});
